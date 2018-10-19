@@ -24,4 +24,5 @@ export interface FlightModel {
   'Schedule time'?: string;
   'Leg time'?: string;
   'Actual time'?: string;
+  'Change'?: string;
 }
