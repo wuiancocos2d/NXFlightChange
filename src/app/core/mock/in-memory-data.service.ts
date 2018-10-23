@@ -2,6 +2,88 @@ import {InMemoryDbService} from 'angular-in-memory-web-api';
 
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    const flightChangeRecord = [
+      {
+        'Title': 'News 2018-10-23',
+        'Date': '2018-10-23',
+        'Cancel': [
+          {
+            'DEP': 'PEK',
+            'STD': '2018/10/16 20:40',
+            'ATD': '20:35',
+            'AB': '20:57',
+            'TD': '0:01',
+            'ATA': '0:07',
+            'ETA': '23:59',
+            'STA': '0:25',
+            'ARR': 'MFM',
+            'Gate Pos': 'B8',
+            'Remark': '',
+            'Delay Reason': '',
+          },
+          {
+            'DEP': 'HFE',
+            'STD': '2018/10/16 21:00',
+            'ATD': '22:19',
+            'AB': '22:31',
+            'TD': '0:50',
+            'ATA': '0:54',
+            'ETA': '0:56',
+            'STA': '23:50',
+            'ARR': 'MFM',
+            'Gate Pos': 'A8',
+            'Remark': 'Retiming due to aircraft AOG for maintenance task',
+            'Delay Reason': '81',
+          },
+          {
+            'DEP': 'DAD',
+            'STD': '2018/10/16 22:50',
+            'ATD': '22:42',
+            'AB': '22:56',
+            'TD': '0:17',
+            'ATA': '0:23',
+            'ETA': '0:21',
+            'STA': '0:35',
+            'ARR': 'MFM',
+            'Gate Pos': 'B10',
+            'Remark': '',
+            'Delay Reason': '',
+          },
+        ],
+        'Delay': [
+          {
+            'DEP': 'BKK',
+            'STD': '2018/10/16 23:35',
+            'ATD': '23:31',
+            'AB': '23:53',
+            'TD': '2:08',
+            'ATA': '2:18',
+            'ETA': '2:15',
+            'STA': '2:20',
+            'ARR': 'MFM',
+            'Gate Pos': 'B4',
+            'Remark': 'BMAN engine replacement',
+            'Delay Reason': '',
+            'Change': 'Delay',
+          },
+          {
+            'DEP': 'HAN',
+            'STD': '2018/10/17 0:15',
+            'ATD': '0:06',
+            'AB': '0:22',
+            'TD': '1:49',
+            'ATA': '1:59',
+            'ETA': '1:43',
+            'STA': '2:00',
+            'ARR': 'MFM',
+            'Gate Pos': 'A12',
+            'Remark': '',
+            'Delay Reason': '',
+            'Change': 'Delay',
+          },
+        ],
+      }
+    ];
     const flights = [
       {
         'DEP': 'PEK',
@@ -16,6 +98,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'Gate Pos': 'B8',
         'Remark': '',
         'Delay Reason': '',
+        'Change': 'Cancel',
       },
       {
         'DEP': 'HFE',
@@ -30,6 +113,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'Gate Pos': 'A8',
         'Remark': 'Retiming due to aircraft AOG for maintenance task',
         'Delay Reason': '81',
+        'Change': 'Cancel',
       },
       {
         'DEP': 'DAD',
@@ -44,6 +128,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'Gate Pos': 'B10',
         'Remark': '',
         'Delay Reason': '',
+        'Change': 'Cancel',
       },
       {
         'DEP': 'BKK',
@@ -58,6 +143,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'Gate Pos': 'B4',
         'Remark': 'BMAN engine replacement',
         'Delay Reason': '',
+        'Change': 'Delay',
       },
       {
         'DEP': 'HAN',
@@ -72,6 +158,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'Gate Pos': 'A12',
         'Remark': '',
         'Delay Reason': '',
+        'Change': 'Delay',
       },
       {
         'DEP': 'DAD',

@@ -9,14 +9,16 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { AppRoutingModule } from './app-routing.module';
-
+import { ShareModule } from './share/share.module';
 import {ControlPageModule} from './control-page/control-page.module';
+import { HeaderComponent } from './share';
 
 registerLocaleData(zh);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +27,7 @@ registerLocaleData(zh);
     HttpClientModule,
     NgZorroAntdModule,
     AppRoutingModule,
+    ShareModule,
     ControlPageModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],

@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContainerComponent } from './container/container.component';
-import { HeaderComponent } from './header/header.component';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { OmisSearchComponent } from './omis/omis-search/omis-search.component';
+import {ContainerComponent} from './container';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    NgZorroAntdModule,
+    FormsModule,
+    RouterModule,
   ],
-  declarations: [ContainerComponent, HeaderComponent]
+  declarations: [ OmisSearchComponent, ContainerComponent],
+  exports: [  ContainerComponent ]
 })
 export class ShareModule { }

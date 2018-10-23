@@ -1,15 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FlightChangeListComponent } from './flight-change-list/flight-change-list.component';
-import { ControlRoutingModule } from './control-routing.module';
-import { FlightRoutingModule } from '../flight-change/flight-routing.module';
+import {NgModule} from '@angular/core';
+import {FlightChangeListComponent} from './flight-change-list';
+import {ControlRoutingModule} from './control-routing.module';
+import {FlightRoutingModule} from '../flight-change/flight-routing.module';
+import { ShareModule } from '../share/share.module';
 
 @NgModule({
   imports: [
-    CommonModule,
     ControlRoutingModule,
+    ShareModule,
     FlightRoutingModule
   ],
-  declarations: [FlightChangeListComponent]
+  declarations: [
+    FlightChangeListComponent,
+  ]
 })
-export class ControlPageModule { }
+export class ControlPageModule {
+}

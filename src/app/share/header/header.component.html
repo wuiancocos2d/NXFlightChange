@@ -1,3 +1,27 @@
-<p>
-  header works!
-</p>
+<div class="nav-bar">
+  <app-container>
+    <div class="nav-container">
+      <div id="logoContainer" class="icon"
+           class="ant-col-xs-22 ant-col-sm-22 ant-col-md-8 ant-col-lg-5 ant-col-xl-5 ant-col-xxl-4">
+        <a routerLink="home" id="logo"><img [alt]="'logo'" src="assets/logo-with20.svg" alt=""></a>
+      </div>
+      <ul class="menu left ant-col-xs-0 ant-col-sm-0 ant-col-md-16 ant-col-lg-19 ant-col-xl-19 ant-col-xxl-20" nz-menu
+          [nzMode]="'horizontal'">
+        <li nz-menu-item><a routerLink="/home">Home</a></li>
+      </ul>
+      <div class="subBtnant ant-col-xs-2 ant-col-sm-2 ant-col-md-0 ant-col-lg-0 ant-col-xl-0 ant-col-xxl-0">
+        <button nz-button [nzType]="'primary'" style="margin-top: 15px;" (click)="toggleSideMenu()"><i class="anticon"
+                                                                                                       [class.anticon-menu-unfold]="isSideNavCollapsed"
+                                                                                                       [class.anticon-menu-fold]="!isSideNavCollapsed"></i>
+        </button>
+      </div>
+      <nz-drawer [nzVisible]="isSideNavCollapsed" [nzClosable]="false" nzPlacement="right" (nzOnClose)="closeSideMenu()" >
+        <ul nz-menu [nzMode]="'inline'"
+            class="nav-collapse ant-col-xs-24 ant-col-sm-24  ant-col-md-24 ant-col-lg-24 ant-col-xl-24 ant-col-xxl-24"
+            [nzInlineIndent]="0">
+          <li nz-menu-item><a routerLink="/home">Home</a></li>
+        </ul>
+      </nz-drawer>
+    </div>
+  </app-container>
+</div>
