@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flight-change.component.css']
 })
 export class FlightChangeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {

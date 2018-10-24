@@ -1,3 +1,6 @@
-<app-container>
-  <button nz-button nzType="primary">Primary</button>
-</app-container>
+<div *ngIf="changeList.length">
+  <li *ngFor="let change of changeList">
+    change.title
+  </li>
+</div>
+

@@ -13,6 +13,9 @@ import { ShareModule } from './share/share.module';
 import {ControlPageModule} from './control-page/control-page.module';
 import { HeaderComponent } from './share';
 
+import { HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './core/mock/in-memory-data.service';
+
 registerLocaleData(zh);
 
 @NgModule({
@@ -29,6 +32,9 @@ registerLocaleData(zh);
     AppRoutingModule,
     ShareModule,
     ControlPageModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
   bootstrap: [AppComponent]

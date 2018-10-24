@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FlightChangeListComponent } from './flight-change-list/flight-change-list.component';
+import { FlightChangeListComponent } from './flight-change-list';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [{
   path: '',
